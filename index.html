@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Básico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container" class="container centered">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="username" placeholder="Usuario">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Ingresar</button>
+        <p id="error-message"></p>
+    </div>
+
+    <div id="crm-container" class="container hidden">
+        <header>
+            <h2>Bienvenido al CRM</h2>
+            <img src="logo.png" alt="Logo" width="120" height="40">
+            <p>Usuario: <span id="user-display"></span></p>
+            <button onclick="logout()">Cerrar Sesión</button>
+        </header>
+        <div class="dashboard">
+            <h3>Clientes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="client-list">
+                    <tr>
+                        <td>Junier Soto</td>
+                        <td>JunierSoto@gmail.com</td>
+                        <td>809-123-4567</td>
+                        <td>
+                            <button onclick="editClient(this)">Editar</button>
+                            <button onclick="deleteClient(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maria Gómez</td>
+                        <td>mariaG@gmail.com</td>
+                        <td>809-987-6543</td>
+                        <td>
+                            <button onclick="editClient(this)">Editar</button>
+                            <button onclick="deleteClient(this)">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Agregar Nuevo Cliente</h3>
+            <input type="text" id="client-name" placeholder="Nombre">
+            <input type="email" id="client-email" placeholder="Email">
+            <input type="text" id="client-phone" placeholder="Teléfono (809-XXX-XXXX)">
+            <button onclick="addClient()">Agregar Cliente</button>
+            <button onclick="exportToExcel()">Exportar a Excel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+</body>
+</html>

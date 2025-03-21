@@ -17,11 +17,12 @@
 
     <div id="crm-container" class="container hidden">
         <header>
-            <h2>Bienvenido al Sistema de Gestion de Clientes</h2>
+            <h2>Bienvenido al Sistema de Gestión de Clientes</h2>
             <img src="logo.png" alt="Logo" width="120" height="40">
             <p>Usuario: <span id="user-display"></span></p>
             <button onclick="logout()">Cerrar Sesión</button>
         </header>
+
         <div class="dashboard">
             <h3>Clientes</h3>
             <table>
@@ -30,30 +31,13 @@
                         <th>Nombre</th>
                         <th>Email</th>
                         <th>Teléfono</th>
-                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody id="client-list">
-                    <tr>
-                        <td>Junier Soto</td>
-                        <td>JunierSoto@gmail.com</td>
-                        <td>809-123-4567</td>
-                        <td>
-                            <button onclick="editClient(this)">Editar</button>
-                            <button onclick="deleteClient(this)">Eliminar</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Maria Gómez</td>
-                        <td>mariaG@gmail.com</td>
-                        <td>809-987-6543</td>
-                        <td>
-                            <button onclick="editClient(this)">Editar</button>
-                            <button onclick="deleteClient(this)">Eliminar</button>
-                        </td>
-                    </tr>
+                    <!-- Aquí se agregarán los clientes dinámicamente -->
                 </tbody>
             </table>
+
             <h3>Agregar Nuevo Cliente</h3>
             <input type="text" id="client-name" placeholder="Nombre">
             <input type="email" id="client-email" placeholder="Email">

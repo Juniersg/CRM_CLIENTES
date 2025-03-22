@@ -103,6 +103,7 @@ function clearForm() {
     document.getElementById("client-phone").value = "";
 }
 
+
 function clearSelection() {
     selectedClientIndex = null;
 }

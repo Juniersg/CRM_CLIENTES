@@ -7,11 +7,11 @@ let editingClient = null;
 let selectedClientIndex = null;  
 
 let clients = [
-    { name: "Juan Pérez", email: "juan.perez@example.com", phone: "809-123-4567" },
-    { name: "María García", email: "maria.garcia@example.com", phone: "809-234-5678" },
-    { name: "Carlos Martínez", email: "carlos.martinez@example.com", phone: "809-345-6789" },
-    { name: "Ana López", email: "ana.lopez@example.com", phone: "809-456-7890" },
-    { name: "Pedro Rodríguez", email: "pedro.rodriguez@example.com", phone: "809-567-8901" }
+    { name: "Juan Pérez", email: "juan.perez@gmail.com", phone: "809-123-4567" },
+    { name: "María García", email: "maria.garcia@gmail.com", phone: "809-234-5678" },
+    { name: "Carlos Martínez", email: "carlos.martinez@gmail.com", phone: "809-345-6789" },
+    { name: "Ana López", email: "ana.lopez@gmail.com", phone: "809-456-7890" },
+    { name: "Pedro Rodríguez", email: "pedro.rodriguez@gmail.com", phone: "809-567-8901" }
 ];
 
 function login() {
